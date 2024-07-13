@@ -15,15 +15,11 @@ class ProfileScreen extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(Icons.shopping_cart),
-            onPressed: () {
-              // Add navigation to shopping cart screen
-            },
+            onPressed: () {},
           ),
           IconButton(
             icon: Icon(Icons.chat),
-            onPressed: () {
-              // Add navigation to chat screen
-            },
+            onPressed: () {},
           ),
         ],
       ),

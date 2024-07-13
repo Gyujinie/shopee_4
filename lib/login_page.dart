@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shopee4/signup_page.dart';
 import 'package:shopee4/home_page.dart';
 
@@ -14,7 +13,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _phoneNumberController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  bool _passwordVisible = false; // Track password visibility
+  bool _passwordVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 20.0,
               ),
             ),
-            const Spacer(), // Spacer to push icons to the right
+            const Spacer(),
             IconButton(
               icon: const Icon(
                 Icons.store,
@@ -70,14 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 20.0),
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 10.0), //
+                padding: const EdgeInsets.only(bottom: 10.0),
                 child: Image.asset(
                   'lib/images/logo.png',
                   height: 50.0,
                 ),
               ),
             ),
-            // Phone number field
             TextField(
               controller: _phoneNumberController,
               decoration: InputDecoration(
@@ -91,12 +89,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(height: 20.0),
-
-            // Password field
             TextField(
               controller: _passwordController,
-              obscureText:
-                  !_passwordVisible, // Toggle visibility based on state
+              obscureText: !_passwordVisible,
               decoration: InputDecoration(
                 hintText: 'Password',
                 prefixIcon: const Icon(Icons.lock),
@@ -118,14 +113,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(height: 20.0),
-
-            // Login button
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle login logic here
-                  // Navigate to home page
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) => HomePage()),
@@ -144,24 +135,19 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(height: 10.0),
-
-            // Forgot password button
             Align(
-              alignment: Alignment.centerRight, //
+              alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  // Handle forgot password logic here
                   print('Forgot password clicked');
                 },
                 child: const Text(
                   'Log in dengan no. handphone',
-                  style: TextStyle(color: Colors.blue), //
+                  style: TextStyle(color: Colors.blue),
                 ),
               ),
             ),
             const SizedBox(height: 20.0),
-
-            // Divider dan label "ATAU"
             Row(
               children: [
                 Expanded(
@@ -183,10 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-
             const SizedBox(height: 10.0),
-
-            // Social login buttons
             Column(
               children: [
                 SizedBox(
@@ -207,20 +190,19 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
                             'lib/images/google_logo.jpg',
-                            height: 20.0, //
+                            height: 20.0,
                             width: 20.0,
                           ),
                         ),
                         Expanded(
                           child: TextButton(
                             onPressed: () {
-                              // Handle login with Google
                               print('Log in with Google clicked');
                             },
                             child: Text(
                               'Log In dengan Google',
                               textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.black), //
+                              style: TextStyle(color: Colors.black),
                             ),
                           ),
                         ),
@@ -233,10 +215,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Container(
                     margin: const EdgeInsets.only(bottom: 10.0),
                     decoration: BoxDecoration(
-                      color: Colors.white, //
+                      color: Colors.white,
                       borderRadius: BorderRadius.circular(5.0),
                       border: Border.all(
-                        color: Colors.grey.withOpacity(0.5), //
+                        color: Colors.grey.withOpacity(0.5),
                       ),
                     ),
                     child: Row(
@@ -246,20 +228,19 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
                             'lib/images/facebook_logo.png',
-                            height: 20.0, //
+                            height: 20.0,
                             width: 20.0,
                           ),
                         ),
                         Expanded(
                           child: TextButton(
                             onPressed: () {
-                              // Handle login with Facebook
                               print('Log in with Facebook clicked');
                             },
                             child: Text(
                               'Log In dengan Facebook',
                               textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.black), //
+                              style: TextStyle(color: Colors.black),
                             ),
                           ),
                         ),
@@ -271,10 +252,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: double.infinity,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white, //
+                      color: Colors.white,
                       borderRadius: BorderRadius.circular(5.0),
                       border: Border.all(
-                        color: Colors.grey.withOpacity(0.5), //
+                        color: Colors.grey.withOpacity(0.5),
                       ),
                     ),
                     child: Row(
@@ -284,20 +265,19 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
                             'lib/images/WhatsApp_logo.jpg',
-                            height: 20.0, //
+                            height: 20.0,
                             width: 20.0,
                           ),
                         ),
                         Expanded(
                           child: TextButton(
                             onPressed: () {
-                              // Handle login with WhatsApp
                               print('Log in with WhatsApp clicked');
                             },
                             child: Text(
                               'Log In dengan WhatsApp',
                               textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.black), //
+                              style: TextStyle(color: Colors.black),
                             ),
                           ),
                         ),
@@ -308,28 +288,29 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             const SizedBox(height: 20.0),
-            // Footer "Belum punya akun? Daftar"
-            SizedBox(height: 30.0), //
+            SizedBox(height: 30.0),
             Align(
               alignment: Alignment.center,
               child: RichText(
                 text: TextSpan(
                   text: 'Belum punya akun? ',
                   style: TextStyle(
-                    color: Colors.grey, //
+                    color: Colors.grey,
                   ),
                   children: <TextSpan>[
                     TextSpan(
                       text: 'Daftar',
                       style: TextStyle(
-                        color: Colors.blue, //
+                        color: Colors.blue,
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SignUpPage()));
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    SignUpPage()), // Perbaikan ini
+                          );
                         },
                     ),
                   ],

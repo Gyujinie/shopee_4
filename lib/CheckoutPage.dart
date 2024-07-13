@@ -327,7 +327,7 @@ class CheckoutPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Guaranteed to get by 10 - 13 Mei', // Teks "Guaranteed to get by 10 - 13 Mei"
+                            'Guaranteed to get by 10 - 13 Mei',
                             style: TextStyle(
                               fontSize: 11.0,
                               color: Color.fromARGB(255, 41, 207, 171),
@@ -335,7 +335,7 @@ class CheckoutPage extends StatelessWidget {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            'Get up to Rp 10.000 voucher if your order doesn\'t arrive by 13 May 2024.', // Text kosong untuk menjaga jarak dengan teks di sebelah kiri
+                            'Get up to Rp 10.000 voucher if your order doesn\'t arrive by 13 May 2024.',
                             style: TextStyle(
                               fontSize: 10.0,
                               color: Colors.grey,

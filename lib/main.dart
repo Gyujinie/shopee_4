@@ -1,8 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:shopee4/login_page.dart'; // Import login_page.dart
-import 'package:shopee4/home_page.dart'; // Import home_page.dart
+import 'package:shopee4/firebase_option.dart';
+import 'package:shopee4/login_page.dart';
+import 'package:shopee4/home_page.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -16,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: const MyHomePage(), // Memanggil MyHomePage tanpa argumen
+      home: const MyHomePage(),
     );
   }
 }

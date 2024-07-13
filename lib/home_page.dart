@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shopee4/Produk.dart';
-import 'package:shopee4/profil.dart'; // Import file profil.dart
+import 'package:shopee4/profil.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -314,7 +314,7 @@ class HomePage extends StatelessWidget {
                               image: 'lib/images/produk1.jpeg',
                               name:
                                   '[Free Mini Shopping Bag] lilybyred MAUVE LIP SET : Glassy Layer Fixing Tint',
-                              price: 'Rp 100.000',
+                              price: 'Rp 255.000',
                             ),
                           ],
                         ),

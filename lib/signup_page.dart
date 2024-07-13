@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:shopee4/login_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -158,7 +158,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
                             'lib/images/google_logo.jpg',
-                            height: 20.0, //
+                            height: 20.0,
                             width: 20.0,
                           ),
                         ),
@@ -171,7 +171,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             child: Text(
                               'Sign Up with Google',
                               textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.black), //
+                              style: TextStyle(color: Colors.black),
                             ),
                           ),
                         ),
@@ -184,10 +184,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: Container(
                     margin: const EdgeInsets.only(bottom: 10.0),
                     decoration: BoxDecoration(
-                      color: Colors.white, //
+                      color: Colors.white,
                       borderRadius: BorderRadius.circular(5.0),
                       border: Border.all(
-                        color: Colors.grey.withOpacity(0.5), //
+                        color: Colors.grey.withOpacity(0.5),
                       ),
                     ),
                     child: Row(
@@ -197,7 +197,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
                             'lib/images/facebook_logo.png',
-                            height: 20.0, //
+                            height: 20.0,
                             width: 20.0,
                           ),
                         ),
@@ -210,7 +210,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             child: Text(
                               'Sign Up with Facebook',
                               textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.black), //
+                              style: TextStyle(color: Colors.black),
                             ),
                           ),
                         ),
@@ -222,10 +222,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   width: double.infinity,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white, //
+                      color: Colors.white,
                       borderRadius: BorderRadius.circular(5.0),
                       border: Border.all(
-                        color: Colors.grey.withOpacity(0.5), //
+                        color: Colors.grey.withOpacity(0.5),
                       ),
                     ),
                     child: Row(
@@ -235,7 +235,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
                             'lib/images/WhatsApp_logo.jpg',
-                            height: 20.0, //
+                            height: 20.0,
                             width: 20.0,
                           ),
                         ),
@@ -248,7 +248,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             child: Text(
                               'Sign Up with WhatsApp',
                               textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.black), //
+                              style: TextStyle(color: Colors.black),
                             ),
                           ),
                         ),
@@ -260,27 +260,29 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             const SizedBox(height: 20.0),
 
-            SizedBox(height: 30.0), //
+            SizedBox(height: 30.0),
             Align(
               alignment: Alignment.center,
               child: RichText(
                 text: TextSpan(
                   text: 'Already have an account? ',
                   style: TextStyle(
-                    color: Colors.grey, //
+                    color: Colors.grey,
                   ),
                   children: <TextSpan>[
                     TextSpan(
                       text: 'Login',
                       style: TextStyle(
-                        color: Colors.blue, //
+                        color: Colors.blue,
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SignUpPage()));
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyHomePage(),
+                            ),
+                          );
                         },
                     ),
                   ],
